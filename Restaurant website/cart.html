@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Muscat Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+.cart-page-container {
+    padding: 140px 10% 80px;
+    min-height: 80vh;
+}
+
+.cart-title {
+    font-family: 'Playfair Display', serif;
+    color: #6f3737;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.cart-flex {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.cart-items-list {
+    flex: 2;
+}
+
+.cart-item-card {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cart-item-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.item-info { flex-grow: 1; }
+.item-info h3 { font-family: 'Baloo 2', cursive; color: #6f3737; }
+.item-info p { font-size: 0.8rem; color: #777; }
+.item-price { font-weight: bold; color: #948d00; display: block; margin-top: 5px; }
+
+.item-qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.item-qty button {
+    background: #f4f1ea;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.item-qty input {
+    width: 30px;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Sidebar Summary */
+.cart-sidebar { flex: 1; }
+.summary-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 120px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6f3737;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: #6f3737;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover { background: #948d00; }
+.back-to-menu {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #777;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Mobile View */
+@media (max-width: 968px) {
+    .cart-flex { flex-direction: column; }
+    .cart-item-card { flex-direction: column; text-align: center; }
+    .cart-item-card img { margin: 0 0 15px 0; }
+    .item-qty { margin: 15px 0; }
+}
+/* footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+    </style>
+</head>
+<body class="menu-page-body">
+    <nav id="navbar">
+    <div class="nav-left">
+        <div id="logo" onclick="location.href='index.html'">
+            <img src="https://cdn.pixabay.com/photo/2020/09/04/01/40/chef-5542642_960_720.png" alt="Chef Logo">
+        </div>
+        <div id="logoname">Muscat <br>Restaurant</div>
+    </div>
+
+    <ul class="nav-links">
+        <li class="navv" onclick="location.href='index.html'" ><a href="#home">Home</a></li>
+        <li class="navv"><a href="#about">About Us</a></li>
+        <li class="navv" onclick="location.href='menu.html'"><a href="#menu">Menu</a></li>
+        <li class="navv"><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right-btns">
+        <div id="my-cart" onclick="location.href='cart.html'">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> My Cart <span>(0)</span>
+            </a>
+        </div>
+        
+        <div id="booking" onclick="location.href='form.html'">
+            <a href="#">Table Reservation</a>
+        </div>
+    </div>
+</nav>
+    <section class="cart-page-container">
+        <div class="cart-content">
+            <h1 class="cart-title">Your Order</h1>
+            <div class="gold-line"></div>
+
+            <div class="cart-flex">
+                <div class="cart-items-list">
+                    <div class="cart-item-card">
+                        <img src="https://images.unsplash.com/photo-1512132411229-c30391241dd8?q=80&w=200" alt="Biryani">
+                        <div class="item-info">
+                            <h3>Special Mutton Biryani</h3>
+                            <p>Extra Spicy, Serves 1</p>
+                            <span class="item-price">Rs. 850</span>
+                        </div>
+                        <div class="item-qty">
+                            <button>-</button>
+                            <input type="text" value="1" readonly>
+                            <button>+</button>
+                        </div>
+                        <button class="remove-item"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+
+                <aside class="cart-sidebar">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span>Rs. 850</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Delivery Fee</span>
+                            <span>Rs. 150</span>
+                        </div>
+                        <hr>
+                        <div class="summary-line total">
+                            <span>Total</span>
+                            <span>Rs. 1000</span>
+                        </div>
+                        <button class="checkout-btn">Proceed to Payment</button>
+                        <a href="menu.html" class="back-to-menu">Add more items</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Muscat Restaurant. All Rights Reserved. | Crafted with Heritage.</p>
+    </footer>
+</body>
+</html>

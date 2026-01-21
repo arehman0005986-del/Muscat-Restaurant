@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Muscat Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Menu Page Styles */
+.menu-page-body {
+    background-color: #f4f1ea; /* Light cream background */
+}
+
+.menu-display {
+    padding: 120px 10% 60px;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.menu-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #6f3737;
+    font-size: 3.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.food-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.food-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.menu-item:hover .food-img img {
+    transform: scale(1.1);
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #948d00;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.food-info {
+    padding: 25px;
+}
+
+.food-info h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #6f3737;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .menu-display { padding: 100px 5% 40px; }
+    .menu-header h1 { font-size: 2.5rem; }
+}
+    </style>
+</head>
+<body class="menu-page-body">
+
+    <nav id="navbar">
+    <div class="nav-left">
+        <div id="logo" onclick="location.href='index.html'">
+            <img src="https://cdn.pixabay.com/photo/2020/09/04/01/40/chef-5542642_960_720.png" alt="Chef Logo">
+        </div>
+        <div id="logoname">Muscat <br>Restaurant</div>
+    </div>
+
+    <ul class="nav-links">
+        <li class="navv" onclick="location.href='index.html'" ><a href="#home">Home</a></li>
+        <li class="navv"><a href="#about">About Us</a></li>
+        <li class="navv" onclick="location.href='menu.html'"><a href="#menu">Menu</a></li>
+        <li class="navv"><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right-btns">
+        <div id="my-cart" onclick="location.href='cart.html'">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> My Cart <span>(0)</span>
+            </a>
+        </div>
+        
+        <div id="booking" onclick="location.href='form.html'">
+            <a href="#">Table Reservation</a>
+        </div>
+    </div>
+</nav>
+
+    <section class="menu-display">
+        <div class="menu-header">
+            <h1>OUR CULINARY TREASURES</h1>
+            <div class="gold-line"></div>
+            <p>Authentic recipes passed down through generations.</p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://thegoldenrice.com/wp-content/uploads/2023/11/Mutton-Birani-Set-Menu-Featured-Image.jpg" alt="Mutton Biryani">
+                    <span class="price">Rs. 850</span>
+                </div>
+                <div class="food-info">
+                    <h3>Sindhi Mutton Biryani</h3>
+                    <p>Long-grain basmati rice cooked with tender mutton and aromatic spices.</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://bellyrumbles.com/wp-content/uploads/2020/04/chicken-karahi.jpg" alt="Chicken Karahi">
+                    <span class="price">Rs. 1200</span>
+                </div>
+                <div class="food-info">
+                    <h3>Peshawari Chicken Karahi</h3>
+                    <p>Wok-cooked chicken in a rich tomato and green chili base.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://images.deliveryhero.io/image/fd-pk/LH/g0ac-listing.jpg" alt="Beef Pulao">
+                    <span class="price">Rs. 950</span>
+                </div>
+                <div class="food-info">
+                    <h3>Beef Pulao</h3>
+                    <p>Fragrant rice cooked with tender beef and aromatic spices.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://img.freepik.com/free-photo/grilled-kebab-skewers-with-naan-bread_23-2152002832.jpg?semt=ais_hybrid&w=740&q=80" alt="Seekh Kabab">
+                    <span class="price">Rs. 600</span>
+                </div>
+                <div class="food-info">
+                    <h3>Beef Seekh Kabab</h3>
+                    <p>Charcoal-grilled minced meat skewers with fresh herbs.</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/12/Nihari-2c750c0.jpg?quality=90&resize=708,643" alt="Nihari">
+                    <span class="price">Rs. 900</span>
+                </div>
+                <div class="food-info">
+                    <h3>Special Beef Nihari</h3>
+                    <p>Slow-cooked beef stew garnished with ginger and lemon.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://thumbs.dreamstime.com/b/yemeni-mandi-lamb-rice-nuts-traditional-middle-eastern-celebratory-dish-yemeni-mandi-lamb-rice-nuts-399079507.jpg" alt="Beef Mandi">
+                    <span class="price">Rs. 2000</span>
+                </div>
+                <div class="food-info">
+                    <h3>Beef Mandi</h3>
+                    <p>Traditional Yemeni dish with spiced rice and tender beef.</p> 
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://foodaazz.com/wp-content/uploads/2024/01/Butter-Chicken-Makhni.png" alt="Chicken Makhni">
+                    <span class="price">Rs. 1000</span>
+                </div>
+                <div class="food-info">
+                    <h3>Butter Chicken Makhni</h3>
+                    <p>Rich and creamy tomato-based chicken curry.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://www.thedeliciouscrescent.com/wp-content/uploads/2020/08/Haleem-3.jpg" alt="Beef Haleem">
+                    <span class="price">Rs. 1150</span>
+                </div>
+                <div class="food-info">
+                    <h3>Beef Haleem</h3>
+                    <p>Slow-cooked wheat and meat stew with spices.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://images.slurrp.com/prod/recipe_images/transcribe/main%20course/shahi-chicken-korma.webp?impolicy=slurrp-20210601&width=1200&height=675" alt="Chicken Korma">
+                    <span class="price">Rs. 800</span>
+                </div>
+                <div class="food-info">
+                    <h3>Chicken Korma</h3>
+                    <p>Rich and creamy chicken curry with aromatic spices.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://i.ytimg.com/vi/QEYBW42KMkE/maxresdefault.jpg" alt="Chicken White Karahi">
+                    <span class="price">Rs. 1200</span>
+                </div>
+                <div class="food-info">
+                    <h3>Chicken White Karahi</h3>
+                    <p>Spicy and flavorful chicken cooked with green chilies and yogurt.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://thebellyrulesthemind.net/wp-content/uploads/2020/09/Garlic-Naan-3.jpg" alt="Garlic Naan">
+                    <span class="price">Rs. 75</span>
+                </div>
+                <div class="food-info">
+                    <h3>Garlic Naan</h3>
+                    <p>Soft and fluffy Pakistani bread topped with garlic and butter.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://fatimacooks.net/wp-content/uploads/2015/07/Mash-ki-Daal-recipe-2.jpg" alt="Daal Mash">
+                    <span class="price">Rs. 650</span>
+                </div>
+                <div class="food-info">
+                    <h3>Daal Mash</h3>
+                    <p>Hearty and creamy black gram lentil stew.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://assets.epicurious.com/photos/57c5aa88cf9e9ad43de2d966/master/pass/spicy-asian-chicken-soup.jpg" alt="Chicken Soup">
+                    <span class="price">Rs. 250</span>
+                </div>
+                <div class="food-info">
+                    <h3>Chicken Soup</h3>
+                    <p>Warm and comforting chicken broth with vegetables and herbs.</p>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://i0.wp.com/blendofspicesbysara.com/wp-content/uploads/2021/04/PXL_20210403_202602593.PORTRAIT-01.jpeg?resize=800,840&ssl=1" alt="Reshmi Kabab">
+                    <span class="price">Rs. 750</span>
+                </div>
+                <div class="food-info">
+                    <h3>Reshmi Kabab</h3>
+                    <p>Soft and creamy chicken kebabs marinated with yogurt and spices.</p>
+                </div>
+            </div>
+             <div class="menu-item">
+                <div class="food-img">
+                    <img src="https://masalaandchai.com/wp-content/uploads/2021/07/Masala-Chai-Featured.jpg" alt="Chai">
+                    <span class="price">Rs. 160</span>
+                </div>
+                <div class="food-info">
+                    <h3>Chai</h3>
+                    <p>Traditional Pakistani tea brewed with milk, spices, and sugar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

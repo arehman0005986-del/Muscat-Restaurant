@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscat Restaurant | Authentic Taste</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="navbar">
+    <div class="nav-left">
+        <div id="logo" onclick="location.href='index.html'">
+            <img src="https://cdn.pixabay.com/photo/2020/09/04/01/40/chef-5542642_960_720.png" alt="Chef Logo">
+        </div>
+        <div id="logoname">Muscat <br>Restaurant</div>
+    </div>
+
+    <ul class="nav-links">
+        <li class="navv"><a href="#home">Home</a></li>
+        <li class="navv"><a href="#about">About Us</a></li>
+        <li class="navv" onclick="location.href='menu.html'"><a href="#menu">Menu</a></li>
+        <li class="navv"><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right-btns">
+        <div id="my-cart" onclick="location.href='cart.html'">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> My Cart <span>(0)</span>
+            </a>
+        </div>
+        
+        <div id="booking" onclick="location.href='form.html'">
+            <a href="#">Table Reservation</a>
+        </div>
+    </div>
+</nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay">
+            <h1>WELCOME TO MUSCAT RESTAURANT</h1>
+            <p>From the streets of Karachi to the kitchens of Karachi, experience the ultimate heritage of taste.</p>
+            <p class="sub-text">Eat curious, live fully — your next craving answered.</p>
+            <button id="order" onclick="location.href='menu.html'" >Order Now</button>
+        </div>
+    </header>
+
+    <section id="about" class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>Story of Muscat Restaurant</h2>
+                <div class="line"></div>
+                <p>Born in Pakistan, our restaurant honors a multi-generational culinary heritage. What began as a family kitchen defined by hand-ground spices and slow-cooked stews is now a sanctuary for authentic Desi flavors.</p>
+                <p>We craft every dish with patience, traditional techniques, and the freshest ingredients to share the legendary hospitality and history of our culture in every bite.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1512132411229-c30391241dd8?q=80&w=1000" alt="Restaurant Interior">
+            </div>
+        </div>
+    </section>
+    <section class="services-page">
+        <div class="services-header">
+            <h1>OUR PREMIUM SERVICES</h1>
+            <div class="gold-line"></div>
+            <p>Bringing the authentic taste of Pakistan to your doorstep and special events.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-utensils"></i></div>
+                <h3>Event Catering</h3>
+                <p>From weddings to corporate lunches, we provide full-course Pakistani menus featuring our signature Biryani and Karahi.</p>
+            </div>
+
+            <div class="service-card active-card">
+                <div class="icon-box"><i class="fas fa-motorcycle"></i></div>
+                <h3>Express Delivery</h3>
+                <p>Enjoy piping hot, authentic meals in the comfort of your home. We ensure spill-proof packaging and timely delivery.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-users"></i></div>
+                <h3>Private Dining</h3>
+                <p>Reserve our exclusive "Zaiqa Lounge" for family gatherings. Experience traditional floor seating and royal service.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-bread-slice"></i></div>
+                <h3>Live Tandoor</h3>
+                <p>Special live BBQ and Tandoor setups for your outdoor parties, serving fresh Naan and Seekh Kababs on the spot.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>CONTACT US</h1>
+                <div class="gold-line"></div>
+                <p>Have a question or feedback? We'd love to hear from you.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="input-group">
+                            <textarea rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Main Shahrah-e-Faisal, Karachi, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 21 3456789</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@zaiqarestaurant.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Mon - Sun: 12:00 PM - 12:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <p>&copy; 2026 Zaiqa Restaurant. All Rights Reserved. | Crafted with Heritage.</p>
+    </footer>
+</body>
+</html> 

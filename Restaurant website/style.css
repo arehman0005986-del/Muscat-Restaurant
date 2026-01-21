@@ -1,0 +1,545 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar: Clean and Fixed */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 90px;
+    padding: 0 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+navbar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+.nav-left { display: flex; align-items: center; }
+
+#logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#logoname {
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.navv:hover a {
+    background-color: brown;
+    font-weight: bolder;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: white;
+}
+
+#booking a {
+    background: rgb(205, 73, 73);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+}
+#booking a:hover {
+    background: rgb(202, 145, 145);
+    font-weight: bolder;
+}
+#booking a:active {
+    background: rgb(86, 0, 0);
+}
+/* Container to hold both buttons side-by-side */
+.nav-right-btns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* My Cart Button Styling */
+#my-cart a {
+    border: 2px solid #948d00;
+    color: #948d00;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#my-cart a:hover {
+    background: #948d00;
+    color: white;
+}
+
+/* Ensure the count span looks slightly different */
+#my-cart a span {
+    font-weight: 800;
+}
+
+/* Adjusting the existing booking button for alignment */
+#booking a {
+    white-space: nowrap; /* Prevents text from breaking into two lines */
+    display: inline-block;
+}
+
+/* Mobile Responsive adjustment for buttons */
+@media (max-width: 900px) {
+    .nav-right-btns {
+        gap: 8px;
+    }
+    #my-cart a, #booking a {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    color: brown;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#order {
+    margin-top: 25px;
+    padding: 12px 35px;
+    background: #948d00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#order:hover {
+    background: brown;
+    font-weight: bolder;
+}
+
+/* Story Section: The Flex Layout */
+.story-section {
+    background-color: #6f3737; /* Brownish theme */
+    padding: 100px 10%;
+    color: white;
+}
+.story-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(111, 55, 55, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.story-content { flex: 1; }
+.story-image { flex: 1; }
+
+.story-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    background: #948d00;
+    margin-bottom: 20px;
+}
+
+.story-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 15px;
+    /* Frame Effect */
+    border-right: 15px solid #948d00;
+    border-bottom: 15px solid #948d00;
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.3);
+}
+/* Services Page Container */
+.services-page {
+    background-color: #fdfdfd;
+    padding: 100px 10%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.services-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 253, 253, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.services-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #6f3737; /* Your theme brown */
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.gold-line {
+    width: 80px;
+    height: 4px;
+    background: #948d00; /* Your theme gold */
+    margin: 15px auto;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Service Card Styling */
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(111, 55, 55, 0.15);
+}
+
+.active-card {
+    background: #6f3737;
+    color: white;
+}
+
+.active-card .icon-box {
+    color: #948d00;
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: #6f3737;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.active-card p {
+    color: #ddd;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .services-header h1 { font-size: 2.2rem; }
+    .services-page { padding: 60px 5%; }
+}
+/* Contact Section */
+.contact-section {
+    background-color: #fff;
+    padding: 100px 10%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #6f3737;
+    font-size: 3rem;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Form Styling */
+.contact-form {
+    flex: 2;
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #6f3737;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #948d00;
+}
+
+.submit-btn {
+    background: #6f3737;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #948d00;
+    transform: scale(1.05);
+}
+
+/* Info Styling */
+.contact-info {
+    flex: 1;
+    background: #6f3737;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #948d00;
+    width: 30px;
+}
+
+.info-item h4 {
+    font-family: 'Baloo 2', cursive;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+/* Responsive Contact */
+@media (max-width: 968px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .contact-form, .contact-info {
+        width: 100%;
+    }
+}
+/* Menu Page Styles */
+.menu-page-body {
+    background-color: #f4f1ea; /* Light cream background */
+}
+
+.menu-display {
+    padding: 120px 10% 60px;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.menu-header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #6f3737;
+    font-size: 3.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.food-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.food-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.menu-item:hover .food-img img {
+    transform: scale(1.1);
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #948d00;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.food-info {
+    padding: 25px;
+}
+
+.food-info h3 {
+    font-family: 'Baloo 2', cursive;
+    color: #6f3737;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .menu-display { padding: 100px 5% 40px; }
+    .menu-header h1 { font-size: 2.5rem; }
+}
